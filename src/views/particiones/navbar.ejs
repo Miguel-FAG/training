@@ -1,0 +1,26 @@
+<nav class="topnav" id="myTopnav">
+   <a class="navbar-brand active" href="/">
+      AYANAMI
+   </a>
+   
+   <a class="izquierda" href="/">Inicio</a>
+   <a class="izquierda" href="catalogo">Catálogo</a>    
+   <a class="izquierda" href="galeria">Galería</a>  
+   <a class="izquierda" href="facturacion">Facturación</a> 
+
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+   </a>
+</nav>
+
+<script>
+   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+   function myFunction() {
+      var x = document.getElementById("myTopnav");
+         if (x.className === "topnav") {
+            x.className += " responsive";
+         } else {
+            x.className = "topnav";
+         }
+      }
+</script>
