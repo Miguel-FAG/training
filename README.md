@@ -1,0 +1,2 @@
+# training
+Turing IA
