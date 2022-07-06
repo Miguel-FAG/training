@@ -1,26 +1,35 @@
-<nav class="topnav" id="myTopnav">
-   <a class="navbar-brand active" href="/">
-      AYANAMI
-   </a>
-   
-   <a class="izquierda" href="/">Inicio</a>
-   <a class="izquierda" href="catalogo">Catálogo</a>    
-   <a class="izquierda" href="galeria">Galería</a>  
-   <a class="izquierda" href="facturacion">Facturación</a> 
 
-   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-   </a>
-</nav>
+<header>
+   <nav class="topnav px-5" id="myTopnav">
+      <a class="navbar-brand active" href="/">TURING IA</a>
+         
+      <a class="izquierda" href="/">Contacto</a>
+      <a class="izquierda" href="/">Tableau </a>    
+      <a class="izquierda" href="/">Servicios</a>  
+      <a class="izquierda" href="/">Nosotros</a>
+      <a class="izquierda" href="/">Inicio </a> 
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+      </a>
+   </nav>
+
+   <div class="container m-5">
+      <h2><%= title %></h2>
+      <p><%= description %></p>
+   </div>
+
+</header>
+   
 
 <script>
    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
    function myFunction() {
       var x = document.getElementById("myTopnav");
-         if (x.className === "topnav") {
+         if (x.className === "topnav px-5") {
             x.className += " responsive";
          } else {
-            x.className = "topnav";
+            x.className = "topnav px-5";
          }
       }
 </script>
