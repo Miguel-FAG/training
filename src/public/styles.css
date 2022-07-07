@@ -1,3 +1,40 @@
+/*
+
+   Project: Entrenamiento
+   Create: 07/07/2022
+   Last update: 07/07/2022
+
+   Content
+
+   1. General
+      1.1 Import Lato font
+      1.2 Root vars
+      1.3 Body setup
+
+   2. Navigation
+      2.1 Header
+      2.2 Navigation Styles
+      2.3 Media queries para responsive
+
+   3. Footer
+   
+   4. Inputs and elements styles
+
+   5. Flex
+
+   6. Seccion: Tecnologias
+
+   7. Seccion: Que realizamos
+
+   8. Seccion: Lo que te ofrecemos
+
+   9. Historias
+      9.1 Carrusel de imagenes de la seccion de historias
+
+   10. Seccion Contacto
+
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 :root{
@@ -17,7 +54,7 @@ body{
    -------  Navigation  -------  
 */
 
-/*  Header  */
+/*  2.1 Header  */
 header{
    background: url('fondo2.jpg') no-repeat center;
    background-size: cover;
@@ -31,13 +68,33 @@ header p{
    font-weight: bold;
 }
 
+header #brandsNav{
+   float: right;
+   color: var(--blanco);
+}
+
+header #brandsNav i{
+   cursor: pointer;
+   margin-right: 50px;
+}
+
+header #brandsNav i:hover{
+   color: rgba(61, 101, 171, 0.819);
+}
+
+@media screen and (max-width: 600px) {
+   #brandsNav {display: none;}
+}
+
 /* 
-  Add a black background color to the top navigation 
+   2.2 Navigation Styles
+   
+   Add a black background color to the top navigation 
 */
 nav {
    background: transparent;
    overflow: hidden;
-   margin-bottom: 50px;
+   margin-bottom: 100px;
    position: sticky;
    top: 50px;
 }
@@ -76,7 +133,10 @@ nav .izquierda{
    display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* 
+   2.3 Media queries para responsive
+
+   When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
    .topnav a:not(:first-child) {display: none;}
    .topnav a.icon {
@@ -100,7 +160,9 @@ nav .izquierda{
    }
 }
 
-/* Footer */
+/* 
+   ------- 3. Footer -------- 
+*/
 
 footer{
    background-color: rgb(45, 45, 45);
@@ -120,28 +182,29 @@ footer ul{
 
 footer h5{
    font-size: 30px;
-   font-weight: 800;
+   font-weight: bold;
    text-align: center;
    margin-bottom: 20px;
    color: var(--blanco);
 }
 
-
-
-
-.tecnologias{
-   width: 100%;
-   height: 100%;
+footer i{
+   margin-left: 10px;
+   color: var(--blanco);
 }
 
-input[type='button']{
+
+/* 
+   ------ 4. Inputs and elements styles ------
+*/
+
+input[type='button'], input[type='submit']{
    display: block;
    background-color: var(--blanco);
    color: black;
    font-family: var(--fuente);
    font-size: 22px;
    border-radius: 4px;
-   height: 50px;
    cursor: pointer;
  }
 
@@ -150,24 +213,14 @@ input[type='button']:hover{
    color: var(--blanco);
 }
 
-/* Fondo */
-#fondo{
-   position: relative;
-   width: 100%;
-   height: 100%;
-   top: 50px;
-}
-
-.center{
-   display: block;
-   width: 50%;
-   margin-left: auto;
-   margin-right: auto;
+input[type='submit']:hover{
+   background-color: rgb(32, 70, 140);
+   color: var(--blanco);
 }
 
 h1{
    font-family: var(--fuente), 'Arial';
-   font-size: 20px;
+   font-size: 22px;
    font-weight: 900;
    color: rgba(39, 140, 203, 0.899);
 }
@@ -176,20 +229,19 @@ h2{
    font-family: var(--fuente);
    font-size: 45px;
    color: var(--blanco);
-   font-weight: bold;
-}
-
-p{
-   text-align: justify;
-}
-
-#realizar{
-   font-size: 40px;
    font-weight: bolder;
 }
 
+p{
+   font-family: var(--fuente);
+   text-align: justify;
+}
 
-/* Flex */
+
+
+/* 
+   ------- 5. Flex -------
+*/
 
 .flex{
    display: flex;
@@ -205,6 +257,12 @@ p{
 .flex img{
    width: 100%;
    height: 90%;
+   position: relative;
+}
+
+.flex video{
+   margin-left: 20px;
+   clip-path: polygon(0% 0%,60% 0%,40% 0%,80% 50%,40% 100%,60% 100%,0% 100%);
 }
 
 @media screen and (max-width: 600px) {
@@ -222,15 +280,45 @@ p{
 }
 
 
-/* Carrusel */
+/* 
+   -------- 6. Seccion: Tecnologias --------
+*/
 
-.centrar{
-   margin-left: auto;
-   margin-right: auto;
+.tecnologias{
+   width: 80%;
+   height: 90%;
 }
 
 
-/* Otro Carrusel */
+
+/* 
+   -------- 7. Seccion: Que realizamos --------
+*/
+
+#realizar{  /*  Estilos especificos para los elementos p */
+   font-size: 40px;
+   font-weight: bolder;
+}
+
+
+/* 
+   ------- 8. Seccion: Lo que te ofrecemos -------
+*/
+
+#captions{
+   position: relative;
+   top: -150px;
+}
+
+#captions p{
+   font-size: 22px;
+   font-weight: bold;
+}
+
+/* 
+   ------- 9. Seccion: Historias ------- 
+*/
+
 .historias{
    height: 600px;
    margin: 0;
@@ -240,6 +328,21 @@ p{
    align-items: center;
    justify-items: center;
 }
+
+.historias img{
+   width: 100%;
+   height: 50%;
+   margin-bottom: 8%;
+   padding: 2%;
+}
+
+.historias p{
+   font-size: 18px;
+   font-weight: 800;
+}
+
+
+/* 9.1 Carrusel de imagenes de la seccion de historias */
 
 main#carousel {
    grid-row: 1 / 2;
@@ -273,23 +376,23 @@ main#carousel {
  
  div.item:nth-of-type(1) {
    --offset: 1;
-   background-color: #90f1ef;
+   background-color: #f2ffff;
  }
  div.item:nth-of-type(2) {
    --offset: 2;
-   background-color: #ff70a6;
+   background-color: #fff7fa;
  }
  div.item:nth-of-type(3) {
    --offset: 3;
-   background-color: #ff9770;
+   background-color: #eaf0ff;
  }
  div.item:nth-of-type(4) {
    --offset: 4;
-   background-color: #ffd670;
+   background-color: #f2ebff;
  }
  div.item:nth-of-type(5) {
    --offset: 5;
-   background-color: #e9ff70;
+   background-color: white;
  }
  
  input:nth-of-type(1) {
@@ -331,3 +434,32 @@ main#carousel {
  input:nth-of-type(5):checked ~ main#carousel {
    --position: 5;
  }
+
+
+
+/* 
+   ------ 10. Seccion: Contacto ------
+*/
+
+.contacto{
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#card-form{
+   border-radius: 2px;
+   box-shadow: 4px 3px 3px 4px black;
+   padding: 20px;
+}
+
+#card-form textarea,input[type]:not([type="submit"]):not([type="button"]){
+   display: block;
+   width: 100%;
+   margin-top: 5px;
+   margin-bottom: 10px;
+   font-family: var(--fuente);
+   font-size: 20px;
+   padding: 2%;
+}
+

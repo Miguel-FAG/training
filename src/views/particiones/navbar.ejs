@@ -1,4 +1,5 @@
 
+<!-- Navegacion -->
 <header>
    <nav class="topnav px-5" id="myTopnav">
       <a class="navbar-brand active" href="/">TURING IA</a>
@@ -15,9 +16,18 @@
    </nav>
 
    <div class="container m-5">
+
+      <!-- Paramentros obtenidos e imprimiendolas en formato HTML -->
       <h2><%= title %></h2>
       <p><%= description %></p>
    </div>
+
+   <section id="brandsNav">
+      <i class="fa-brands fa-linkedin fa-2x"></i>
+      <i class="fa-brands fa-instagram fa-2x"></i>
+      <i class="fa-brands fa-facebook fa-2x"></i>
+      <i class="fa-brands fa-twitter fa-2x"></i>
+   </section>
 
 </header>
    
@@ -31,5 +41,5 @@
          } else {
             x.className = "topnav px-5";
          }
-      }
+   }
 </script>
